@@ -1,10 +1,10 @@
-# Advanced Configuration
+# 高度な設定
 
 While Starship is a versatile shell, sometimes you need to do more than edit `starship.toml` to get it to do certain things. This page details some of the more advanced configuration techniques used in starship.
 
 ::: warning The configurations in this section are subject to change in future releases of Starship. :::
 
-## Custom pre-prompt and pre-execution Commands in Bash
+## Bashのカスタムの事前プロンプトおよび事前実行コマンド
 
 Bash does not have a formal preexec/precmd framework like most other shells. Because of this, it is difficult to provide fully customizable hooks in `bash`. However, Starship does give you limited ability to insert your own functions into the prompt-rendering procedure:
 
@@ -27,11 +27,11 @@ trap blastoff DEBUG     # Trap DEBUG *before* running starship
 eval $(starship init bash)
 ```
 
-## Change Window Title
+## ウィンドウのタイトルの変更
 
 Some shell prompts will automatically change the window title for you (e.g. to reflect your working directory). Fish even does it by default. Starship does not do this, but it's fairly straightforward to add this functionality to `bash` or `zsh`.
 
-First, define a window title change function (identical in bash and zsh):
+まず、ウィンドウのタイトルを変更する関数を定義してください（ bash も zsh も同様に）
 
 ```bash
 function set_win_title(){
@@ -55,7 +55,7 @@ precmd_functions+=(set_win_title)
 
 If you like the result, add these lines to your shell configuration file (`~/.bashrc` or `~/.zsrhc`) to make it permanent.
 
-## Style Strings
+## スタイルの設定
 
 Style strings are a list of words, separated by whitespace. The words are not case sensitive (i.e. `bold` and `BoLd` are considered the same string). Each word can be one of the following:
 
@@ -71,10 +71,10 @@ where `<color>` is a color specifier (discussed below). `fg:<color>` and `<color
 
 The `none` token overrides all other tokens in a string, so that e.g. `fg:red none fg:blue` will still create a string with no styling. It may become an error to use `none` in conjunction with other tokens in the future.
 
-A color specifier can be one of the following:
+色は以下のいずれか1つを指定できます。
 
 - One of the standard terminal colors: `black`, `red`, `green`, `blue`, `yellow`, `purple`, `cyan`, `white`. You can optionally prefix these with `bright-` to get the bright version (e.g. `bright-white`).
 - A `#` followed by a six-digit hexadecimal number. This specifies an [RGB color hex code](https://www.w3schools.com/colors/colors_hexadecimal.asp).
 - A number between 0-255. This specifies an [8-bit ANSI Color Code](https://i.stack.imgur.com/KTSQa.png).
 
-If multiple colors are specified for foreground/background, the last one in the string will take priority.
+複数の色が文字色/背景色に指定された際には、最後の指定が優先して選ばれます。
