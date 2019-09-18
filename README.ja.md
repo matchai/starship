@@ -36,11 +36,11 @@
 
 <h4 align="center">
   <br />
-  <a href="https://starship.rs">Website</a>
+  <a href="https://starship.rs">ウェブサイト</a>
   ·
-  <a href="#-installation">Installation</a>
+  <a href="#-installation">インストール</a>
   ·
-  <a href="https://starship.rs/config/">Configuration</a>
+  <a href="https://starship.rs/config/">設定</a>
 </h4>
 
 <h1></h1>
@@ -98,9 +98,9 @@ p>
 
 ### Getting Started
 
-1. Install the **starship** binary:
+1. **Starship** のバイナリをインストール
   
-    **[Download archives of precompiled binaries](https://github.com/starship/starship/releases)** if you don't use the platforms below.
+    もし以下のプラットフォームを使用していない場合は **[コンパイル済みのバイナリファイルをダウンロード](https://github.com/starship/starship/releases)** してください。
   
   #### Homebrew
 
@@ -108,7 +108,7 @@ p>
    $ brew install starship
    ```
 
-#### Rust (v1.33 or higher)
+#### Rust (v1.33 もしくはそれ以上)
 
    ```sh
    $ cargo install starship
@@ -116,7 +116,7 @@ p>
 
 #### Arch Linux (AUR)
 
-Starship is available on the AUR under the name `starship`. Install it with `yay` or your favorite AUR helper.
+Starship は AUR 上の `starship` というパッケージ名で利用可能です。 `yay` またはお好きな AUR ヘルパーでインストールしてください。
 
    ```sh
    $ yay -S starship
@@ -134,11 +134,11 @@ Starship is available on the AUR under the name `starship`. Install it with `yay
    $ pkg install starship
    ```
 
-1. Add the init script to your shell's config file:
+1. 初期化のためのスクリプトをシェルの設定ファイルに追加
   
   #### Bash
   
-    Add the following to the end of `~/.bashrc`:
+    `~/.bashrc` の最後に以下を追記してください
 
    ```sh
    # ~/.bashrc
@@ -148,7 +148,7 @@ Starship is available on the AUR under the name `starship`. Install it with `yay
 
 #### Fish
 
-Add the following to the end of `~/.config/fish/config.fish`:
+`~/.config/fish/config.fish` の最後に以下を追記してください
 
    ```sh
    # ~/.config/fish/config.fish
@@ -158,7 +158,7 @@ Add the following to the end of `~/.config/fish/config.fish`:
 
 #### Zsh
 
-Add the following to the end of `~/.zshrc`:
+`~/.zshrc` の最後に以下を追記してください
 
    ```sh
    # ~/.zshrc
@@ -166,7 +166,7 @@ Add the following to the end of `~/.zshrc`:
    eval "$(starship init zsh)"
    ```
 
-## 🔧 Configuration
+## 🔧 設定
 
 For details on how to configure Starship, check out our [documentation](https://starship.rs/config/).
 
