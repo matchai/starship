@@ -47,8 +47,8 @@
 
 <
 
-p align="center"> Starship is the minimal, blazing fast, and extremely customizable prompt for any shell!  
-The prompt shows information you need while you're working, while staying sleek and out of the way.
+p align="center"> Starship は小さく、とても高速に動作し、非常にカスタマイズ可能なすべてのシェルに対応したプロンプトです！  
+プロンプトには、作業中に必要な情報が表示されます。
 
 <
 
@@ -61,7 +61,7 @@ p>
   <br>
 </p>
 
-## 🍬 Features
+## 🍬 機能
 
 - 最後のコマンドがゼロ以外のコードで終了すると、プロンプト文字が赤に変わります
 - ログインユーザーと異なる場合にユーザー名を表示する
@@ -87,16 +87,16 @@ p>
   - `+` — added files
   - `»` — renamed files
   - `✘` — deleted files
-- Execution time of the last command if it exceeds the set threshold
+- 閾値を超えた際の、コマンドの実行時間
 - バックグラウンドジョブのインジケーター (`✦`)
 
 ## 🚀 インストール
 
-### Prerequisites
+### 必要なもの
 
 - [Powerline フォント](https://github.com/powerline/fonts) がターミナルにインストールされて有効になっている必要があります（例えば [Fira Code](https://github.com/tonsky/FiraCode) を試してみてください）。
 
-### Getting Started
+### 入門
 
 1. **Starship** のバイナリをインストール
   
