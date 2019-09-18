@@ -2,7 +2,7 @@
 
 ::: tip 🔥 Configuration is currently being worked on. Many new configuration options will be available in coming releases. :::
 
-To get started configuring starship, create the following file: `~/.config/starship.toml`.
+starshipの設定を開始するには、`~/.config/starship.toml` ファイルを作成します。
 
 ```shell
 $ touch ~/.config/starship.toml
@@ -27,7 +27,7 @@ disabled = true
 
 **Module**: A component in the prompt giving information based on contextual information from your OS. For example, the "nodejs" module shows the version of NodeJS that is currently installed on your computer, if your current directory is a NodeJS project.
 
-**Segment**: Smaller sub-components that compose a module. For example, the "symbol" segment in the "nodejs" module contains the character that is shown before the version number (⬢ by default).
+**セグメント**: モジュールを構成する小さなサブコンポーネントです。 For example, the "symbol" segment in the "nodejs" module contains the character that is shown before the version number (⬢ by default).
 
 Here is the representation of the node module. In the following example, "symbol" and "version" are segments within it. Every module also has a prefix and suffix that are the default terminal color.
 
