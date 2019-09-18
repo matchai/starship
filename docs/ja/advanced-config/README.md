@@ -23,7 +23,7 @@ starship_precmd_user_func="blastoff"
 function blastoff(){
     echo "🚀"
 }
-trap blastoff DEBUG     # Trap DEBUG *before* running starship
+trap blastoff DEBUG     # starshipを起動する前にDEBUGをトラップする
 eval $(starship init bash)
 ```
 
