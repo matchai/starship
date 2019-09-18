@@ -158,15 +158,15 @@ use_symbol_for_status = true
 
 ::: warning BashでDEBUGトラップをhookしない `bash`でStarshipを実行している場合、 `eval $(starship init $0)`実行した後に`DEBUG`トラップをフックしないでください。そうしないと、このモジュールが**おそらくですが**壊れます。 :::
 
-preexecのような機能を必要とするBashユーザーは、 [rcalorasのbash_preexecフレームワーク](https://github.com/rcaloras/bash-preexec)を使用できます。 Simply define the arrays `preexec_functions` and `precmd_functions` before running `eval $(starship init $0)`, and then proceed as normal.
+preexecのような機能を必要とするBashユーザーは、 [rcalorasのbash_preexecフレームワーク](https://github.com/rcaloras/bash-preexec)を使用できます。 `eval $(starship init $0)` を実行する前に、`preexec_functions`、および`precmd_functions`定義するだけで、通常どおり続行します。
 
 ### オプション
 
-| 変数         | デフォルト           | 説明                                  |
-| ---------- | --------------- | ----------------------------------- |
-| `min_time` | `2`             | 時間を表示する最短期間です。                      |
-| `style`    | `"bold yellow"` | モジュールのスタイルです。                       |
-| `disabled` | `false`         | Disables the `cmd_duration` module. |
+| 変数         | デフォルト           | 説明                          |
+| ---------- | --------------- | --------------------------- |
+| `min_time` | `2`             | 時間を表示する最短期間です。              |
+| `style`    | `"bold yellow"` | モジュールのスタイルです。               |
+| `disabled` | `false`         | `cmd_duration`モジュールを無効にします。 |
 
 
 ### 設定例
@@ -180,11 +180,11 @@ min_time = 4
 
 ## ディレクトリ
 
-The `directory` module shows the path to your current directory, truncated to three parent folders. Your directory will also be truncated to the root of the git repo that you're currently in.
+`directory`モジュールには、現在のディレクトリへのパスが表示され、3つの親フォルダは切り捨てられます。 ディレクトリは、現在のgitリポジトリであるとルートとなります。
 
-When using the fish style pwd option, instead of hiding the path that is truncated, you will see a shortened name of each directory based on the number you enable for the option.
+fishスタイルのpwdオプションを使用すると、切り捨てられたパスを非表示にする代わりに、オプションで有効にした番号に基づいて各ディレクトリの短縮名が表示されます。
 
-For example, given `~/Dev/Nix/nixpkgs/pkgs` where `nixpkgs` is the repo root, and the option set to `1`. You will now see `~/D/N/nixpkgs/pkgs`, whereas before it would have been `nixpkgs/pkgs`.
+例として、`~/Dev/Nix/nixpkgs/pkgs`で、`nixpkgs`がリポジトリルートであり、オプションが`1`に設定されている場合を挙げます。 以前は`nixpkgs/pkgs`でしたが、`~/D/N/nixpkgs/pkgs`が表示されます。
 
 ### オプション
 
@@ -194,7 +194,7 @@ For example, given `~/Dev/Nix/nixpkgs/pkgs` where `nixpkgs` is the repo root, an
 | `truncate_to_repo`          | `true`        | 現在いるgitリポジトリのルートに切り捨てるかどうかです。          |
 | `fish_style_pwd_dir_length` | `0`           | fish shellのpwdパスロジックを適用するときに使用する文字数です。 |
 | `style`                     | `"bold cyan"` | モジュールのスタイルです。                          |
-| `disabled`                  | `false`       | Disables the `directory` module.       |
+| `disabled`                  | `false`       | `directory`モジュールを無効にします。               |
 
 
 ### 設定例
