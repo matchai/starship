@@ -20,7 +20,7 @@
     <a href="https://repology.org/project/starship/versions">
     <img src="https://repology.org/badge/tiny-repos/starship.svg" alt="Packaging status">
   </a><br>
-  <a href="#contributors">
+  <a href="#-貢献">
     <img
       src="https://badgen.net/badge/all%20contributors/20/orange"
       alt="All Contributors"
@@ -71,18 +71,18 @@ p>
 - 現在の Python のバージョン (`🐍`)
 - 現在の Go バージョン (`🐹`)
 - Nix-shell の環境検出
-- Current version of package in current directory (`📦`) 
+- カレントディレクトリにある現在のパッケージバージョン(`📦`) 
   - npm (Node.js)
   - cargo (Rust)
   - poetry (Python)
 - 現在のバッテリー残量と状態
-- Current Git branch and rich repo status: 
-  - `=` — conflicting changes
-  - `⇡` — ahead of remote branch
-  - `⇣` — behind of remote branch
-  - `⇕` — diverged changes
-  - `?` — untracked changes
-  - `$` — stashed changes
+- 現在の Git ブランチとリッチなリポジトリの状態 
+  - `=` — 競合している変更
+  - `⇡` — リモートブランチより進んでいる変更
+  - `⇣` —リモートブランチに追いついていない変更
+  - `⇕` — 分岐した変更
+  - `?` — 追跡されていない変更
+  - `$` — stashされた変更
   - `!` — modified files
   - `+` — added files
   - `»` — renamed files
