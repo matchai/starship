@@ -1,21 +1,21 @@
 # 設定
 
-::: tip 🔥 Configuration is currently being worked on. Many new configuration options will be available in coming releases. :::
+::: tip 🔥Starshipの開発は現在も進んでいます。 多くの新しいオプションが今後のリリースで利用可能になります。 :::
 
-starshipの設定を開始するには、`~/.config/starship.toml` ファイルを作成します。
+Starshipの設定を開始するには、`~/.config/starship.toml` ファイルを作成します。
 
 ```shell
 $ touch ~/.config/starship.toml
 ```
 
-All configuration for starship is done in this [TOML](https://github.com/toml-lang/toml) file:
+Starshipのすべての設定は、この[TOML](https://github.com/toml-lang/toml)ファイルで行われます。
 
 ```toml
 # Don't print a new line at the start of the prompt
 add_newline = false
 
 # Replace the "❯" symbol in the prompt with "➜"
-[character]      # The name of the module we are confguring is "character"
+[character]      # The name of the module we are configuring is "character"
 symbol = "➜"     # The "symbol" segment is being set to "➜"
 
 # Disable the package module, hiding it from the prompt completely
@@ -25,11 +25,11 @@ disabled = true
 
 ### 用語
 
-**Module**: A component in the prompt giving information based on contextual information from your OS. For example, the "nodejs" module shows the version of NodeJS that is currently installed on your computer, if your current directory is a NodeJS project.
+**モジュール**: OSのコンテキスト情報に基づいて情報を提供するプロンプト内のコンポーネントです。 たとえば、現在のディレクトリがNodeJSプロジェクトである場合、「nodejs」モジュールは、現在コンピューターにインストールされているNodeJSのバージョンを表示します。
 
 **セグメント**: モジュールを構成する小さなサブコンポーネントです。 たとえば、「nodejs」モジュールの「symbol」セグメントには、バージョン番号の前に表示される文字が含まれています（デフォルト: ⬢）。
 
-Here is the representation of the node module. In the following example, "symbol" and "version" are segments within it. Every module also has a prefix and suffix that are the default terminal color.
+以下はNode モジュールの表現です。 次の例では、「シンボル」と「バージョン」はその中のセグメントです。 すべてのモジュールには、デフォルトの端末色であるprefixとsuffixもあります。
 
     [prefix]      [symbol]     [version]    [suffix]
      "via "         "⬢"        "v10.4.1"       ""
@@ -37,15 +37,15 @@ Here is the representation of the node module. In the following example, "symbol
 
 ### スタイルの設定
 
-Most modules in starship allow you to configure their display styles. This is done with an entry (usually called `style`) which is a string specifying the configuration. Here are some examples of style strings along with what they do. For details on the full syntax, consult the [advanced config guide](/advanced-config/).
+Starshipのほとんどのモジュールでは、表示スタイルを設定できます。 これは、設定を指定する文字列であるエントリ（`style`）で行われます。 スタイル文字列の例とその機能を次に示します。 完全な構文の詳細については、詳細は [高度な設定](/advanced-config/)を参照してください 。
 
-- `"fg:green bg:blue"` sets green text on a blue background
-- `"bg:blue fg:bright-green"` sets bright green text on a blue background
-- `"bold fg:27"` sets bold text with [ANSI color](https://i.stack.imgur.com/KTSQa.png) 27
-- `"underline bg:#bf5700"` sets underlined text on a burnt orange background
-- `""` explicitly disables all styling
+- `"fg:green bg:blue"` は、青色の背景に緑色のテキストを設定します
+- `"bg:blue fg:bright-green"` は、青色の背景に明るい緑色のテキストを設定します
+- `"bold fg:27"` は、 [ANSIカラー](https://i.stack.imgur.com/KTSQa.png) 27の太字テキストを設定します
+- `"underline bg:#bf5700"` は、焦げたオレンジ色の背景に下線付きのテキストを設定します
+- `""` はすべてのスタイルを明示的に無効にします
 
-Note that what styling looks like will be controlled by your terminal emulator. For example, some terminal emulators will brighten the colors instead of bolding text, and some color themes use the same values for the normal and bright colors.
+スタイリングがどのように見えるかは、端末エミュレータによって制御されることに注意してください。 たとえば、一部の端末エミュレータはテキストを太字にする代わりに色を明るくします。また、一部のカラーテーマは通常の色と明るい色と同じ値を使用します。また、斜体のテキストを取得するには、端末で斜体をサポートする必要があります。スタイリングがどのように見えるかは、端末エミュレータによって制御されることに注意してください。たとえば、一部の端末エミュレータはテキストを太字にする代わりに色を明るくします。また、一部のカラーテーマは通常の色と明るい色と同じ値を使用します。
 
 ## プロンプト
 
@@ -64,15 +64,15 @@ Note that what styling looks like will be controlled by your terminal emulator. 
 ```toml
 # ~/.config/starship.toml
 
-# Disable the newline at the start of the prompt
+# プロンプト表示の改行を無効にする
 add_newline = false
-# Overwrite a default_prompt_order and  use custom prompt_order
+# デフォルトのプロンプト表示順を書き換える
 prompt_order=["rust","line_break","package","line_break","character"]
 ```
 
-### Default prompt order
+### デフォルトのプロンプト表示順
 
-The `default_prompt_order` configuration option is used to define the order in which modules are shown in the prompt, if empty or no `prompt_order` is provided. The default is as shown:
+`default_prompt_order``オプションは、空または`prompt_order`が指定されていない場合に、プロンプトにモジュールが表示される順序を定義するために使用されます。 デフォルトは次のとおりです。
 
     default_prompt_order = [
         "username",
@@ -98,17 +98,17 @@ The `default_prompt_order` configuration option is used to define the order in w
 
 ## バッテリー
 
-The `battery` module shows how charged the device's battery is and its current charging status. The module is only visible when the device's battery is below 10%.
+`battery`モジュールは、デバイスのバッテリー残量と現在の充電状態を示します。 モジュールは、デバイスのバッテリー残量が10％未満の場合にのみ表示されます。
 
 ### オプション
 
-| 変数                   | デフォルト        | 説明                             |
-| -------------------- | ------------ | ------------------------------ |
-| `full_symbol`        | `"•"`        | バッテリーが満タンのときに表示される記号です。        |
-| `charging_symbol`    | `"⇡"`        | バッテリーの充電中に表示される記号です。           |
-| `discharging_symbol` | `"⇣"`        | バッテリーが放電しているときに表示される記号です。      |
-| `style`              | `"bold red"` | モジュールのスタイルです。                  |
-| `disabled`           | `false`      | Disables the `battery` module. |
+| 変数                   | デフォルト        | 説明                        |
+| -------------------- | ------------ | ------------------------- |
+| `full_symbol`        | `"•"`        | バッテリーが満タンのときに表示される記号です。   |
+| `charging_symbol`    | `"⇡"`        | バッテリーの充電中に表示される記号です。      |
+| `discharging_symbol` | `"⇣"`        | バッテリーが放電しているときに表示される記号です。 |
+| `style`              | `"bold red"` | モジュールのスタイルです。             |
+| `disabled`           | `false`      | `battery`モジュールを無効にします。    |
 
 
 ### 設定例
@@ -124,9 +124,9 @@ discharging_symbol = "💀"
 
 ## 文字
 
-The `character` module shows a character (usually an arrow) beside where the text is entered in your terminal.
+`character`モジュールは、端末でテキストが入力される場所の横に文字（通常は矢印）を表示します。
 
-The character will tell you whether the last command was successful or not. It can do this in two ways: by changing color (red/green) or by changing its shape (❯/✖). The latter will only be done if `use_symbol_for_status` is set to `true`.
+文字は、最後のコマンドが成功したかどうかを示します。 これは、色の変更（赤/緑）またはその形状の変更(❯/✖) の2つの方法で行うことができます。 後者は`use_symbol_for_status`に`true`設定されている場合にのみ行われます。
 
 ### オプション
 
@@ -138,7 +138,7 @@ The character will tell you whether the last command was successful or not. It c
 | `vicmd_symbol`          | `"❮"`          | シェルがvimの通常モードである場合、プロンプトのテキスト入力の前に使用される記号です。 |
 | `style_success`         | `"bold green"` | 最後のコマンドが成功した場合に使用されるスタイルです。                  |
 | `style_failure`         | `"bold red"`   | 最後のコマンドが失敗した場合に使用されるスタイルです。                  |
-| `disabled`              | `false`        | Disables the `character` module.             |
+| `disabled`              | `false`        | `character`モジュールを無効にします。                     |
 
 
 ### 設定例
