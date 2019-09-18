@@ -208,17 +208,17 @@ truncation_length = 8
 
 ## Git ブランチ
 
-The `git_branch` module shows the active branch of the repo in your current directory.
+`git_branch`モジュールは、現在のディレクトリにあるリポジトリのアクティブなブランチを表示します。
 
 ### オプション
 
-| 変数                  | デフォルト           | 説明                                                                                    |
-| ------------------- | --------------- | ------------------------------------------------------------------------------------- |
-| `symbol`            | `" "`          | 現在のディレクトリのリポジトリのブランチ名の前に使用されるシンボルです。                                                  |
-| `truncation_length` | `2^63 - 1`      | gitブランチをX書記素に切り捨てます                                                                   |
-| `truncation_symbol` | `"…"`           | The symbol used to indicate a branch name was truncated. You can use "" for no symbol |
-| `style`             | `"bold purple"` | モジュールのスタイルです。                                                                         |
-| `disabled`          | `false`         | Disables the `git_branch` module.                                                     |
+| 変数                  | デフォルト           | 説明                                          |
+| ------------------- | --------------- | ------------------------------------------- |
+| `symbol`            | `" "`          | 現在のディレクトリのリポジトリのブランチ名の前に使用されるシンボルです。        |
+| `truncation_length` | `2^63 - 1`      | gitブランチをX書記素に切り捨てます。                        |
+| `truncation_symbol` | `"…"`           | ブランチ名切り捨てられていることを示すための記号です。 記号なしに「」も使用できます。 |
+| `style`             | `"bold purple"` | モジュールのスタイルです。                               |
+| `disabled`          | `false`         | `git_branch`モジュールを無効にします。                   |
 
 
 ### 設定例
@@ -234,22 +234,22 @@ truncation_symbol = ""
 
 ## Git の進行状態
 
-The `git_state` module will show in directories which are part of a git repository, and where there is an operation in progress, such as: *REBASING*, *BISECTING*, etc. If there is progress information (e.g., REBASING 3/10), that information will be shown too.
+`git_state`モジュールはgitディレクトリの進行状態を表します。 (例: *REBASING*, *BISECTING*, その他) 進捗情報がある場合(例: REBASING 3/10)はその情報も表示されます。
 
 ### オプション
 
-| 変数                 | デフォルト              | 説明                                                                                                               |
-| ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `rebase`           | `"REBASING"`       | The text displayed when a `rebase` is in progress.                                                               |
-| `merge`            | `"MERGING"`        | The text displayed when a `merge` is in progress.                                                                |
-| `revert`           | `"REVERTING"`      | The text displayed when a `revert` is in progress.                                                               |
-| `cherry_pick`      | `"CHERRY-PICKING"` | The text displayed when a `cherry-pick` is in progress.                                                          |
-| `bisect`           | `"BISECTING"`      | The text displayed when a `bisect` is in progress.                                                               |
-| `am`               | `"AM"`             | The text displayed when an `apply-mailbox` (`git am`) is in progress.                                            |
-| `am_or_rebase`     | `"AM/REBASE"`      | The text displayed when an ambiguous `apply-mailbox` or `rebase` is in progress.                                 |
-| `progress_divider` | `"/"`              | The symbol or text which will separate the current and total progress amounts. (e.g., `" of "`, for `"3 of 10"`) |
-| `style`            | `"bold yellow"`    | モジュールのスタイルです。                                                                                                    |
-| `disabled`         | `false`            | Disables the `git_state` module.                                                                                 |
+| 変数                 | デフォルト              | 説明                                                        |
+| ------------------ | ------------------ | --------------------------------------------------------- |
+| `rebase`           | `"REBASING"`       | `rebase`進行中に表示されるテキストです。                                  |
+| `merge`            | `"MERGING"`        | `merge`進行中に表示されるテキストです。                                   |
+| `revert`           | `"REVERTING"`      | `revert`進行中に表示されるテキストです。                                  |
+| `cherry_pick`      | `"CHERRY-PICKING"` | `cherry-pick`進行中に表示されるテキストです。                             |
+| `bisect`           | `"BISECTING"`      | `disect`進行中に表示されるテキストです。                                  |
+| `am`               | `"AM"`             | `apply-mailbox` (`git am`)の進行中に表示されるテキストです。               |
+| `am_or_rebase`     | `"AM/REBASE"`      | あいまいな`apply-mailbox`または`rebase`が進行中のときに表示されるテキストです。       |
+| `progress_divider` | `"/"`              | 現在の進行量と合計進行量を分ける記号またはテキストです。 (例: `" of "` 、 `"3 of 10"` ) |
+| `style`            | `"bold yellow"`    | モジュールのスタイルです。                                             |
+| `disabled`         | `false`            | `git_state`モジュールを無効にします。                                  |
 
 
 ### 設定例
@@ -264,7 +264,7 @@ cherry_pick = "🍒 PICKING"
 
 ## Git の状態
 
-The `git_status` module shows symbols representing the state of the repo in your current directory.
+`git_status`モジュールは、現在のディレクトリのリポジトリの状態を表すシンボルを表示します。
 
 ### オプション
 
@@ -305,15 +305,15 @@ deleted = "🗑"
 
 ## Golang
 
-The `golang` module shows the currently installed version of Golang. 次の条件のいずれかが満たされると、モジュールが表示されます。
+`golang`モジュールは、現在インストールされているGolangのバージョンを示します。 次の条件のいずれかが満たされると、モジュールが表示されます。
 
-- The current directory contains a `go.mod` file
-- The current directory contains a `go.sum` file
-- The current directory contains a `glide.yaml` file
-- The current directory contains a `Gopkg.yml` file
-- The current directory contains a `Gopkg.lock` file
-- The current directory contains a `Godeps` directory
-- The current directory contains a file with the `.go` extension
+- カレントディレクトリに`go.mod`ファイルが含まれている
+- カレントディレクトリに`go.sum`ファイルが含まれている
+- カレントディレクトリに`glide.yaml`ファイルが含まれている
+- カレントディレクトリに`Gopkg.yml`ファイルが含まれている
+- カレントディレクトリに`Gopkg.lock`ファイルが含まれている
+- カレントディレクトリに`Godeps`ファイルが含まれている
+- カレントディレクトリに`.go`の拡張子のファイルが含まれている
 
 ### オプション
 
@@ -469,11 +469,11 @@ The `package` module is shown when the current directory is the repository for a
 
 ### オプション
 
-| 変数         | デフォルト        | 説明                             |
-| ---------- | ------------ | ------------------------------ |
-| `symbol`   | `"📦 "`       | パッケージのバージョンを表示する前に使用される記号です。   |
-| `style`    | `"bold red"` | モジュールのスタイルです。                  |
-| `disabled` | `false`      | Disables the `package` module. |
+| 変数         | デフォルト        | 説明                           |
+| ---------- | ------------ | ---------------------------- |
+| `symbol`   | `"📦 "`       | パッケージのバージョンを表示する前に使用される記号です。 |
+| `style`    | `"bold red"` | モジュールのスタイルです。                |
+| `disabled` | `false`      | `package`モジュールを無効にします。       |
 
 
 ### 設定例
@@ -503,13 +503,13 @@ Otherwise, it will display the version number from `python --version` and show t
 
 ### オプション
 
-| 変数                   | デフォルト           | 説明                                                                          |
-| -------------------- | --------------- | --------------------------------------------------------------------------- |
-| `symbol`             | `"🐍 "`          | Pythonのバージョンを表示する前に使用される記号です。                                               |
-| `pyenv_version_name` | `false`         | pyenvを使用してPythonバージョンを取得します                                                 |
-| `pyenv_prefix`       | `"pyenv "`      | Prefix before pyenv version display (default display is `pyenv MY_VERSION`) |
-| `style`              | `"bold yellow"` | モジュールのスタイルです。                                                               |
-| `disabled`           | `false`         | Disables the `python` module.                                               |
+| 変数                   | デフォルト           | 説明                                                   |
+| -------------------- | --------------- | ---------------------------------------------------- |
+| `symbol`             | `"🐍 "`          | Pythonのバージョンを表示する前に使用される記号です。                        |
+| `pyenv_version_name` | `false`         | pyenvを使用してPythonバージョンを取得します                          |
+| `pyenv_prefix`       | `"pyenv "`      | pyenvバージョン表示の前のprefix（デフォルトの表示は`pyenv MY_VERSION`）です |
+| `style`              | `"bold yellow"` | モジュールのスタイルです。                                        |
+| `disabled`           | `false`         | `python`モジュールを無効にします。                                |
 
 
 ### 設定例
@@ -525,10 +525,10 @@ pyenv_prefix = "foo "
 
 ## Ruby
 
-The `ruby` module shows the currently installed version of Ruby. 次の条件のいずれかが満たされると、モジュールが表示されます。
+`ruby`モジュールは、現在インストールされているRubyのバージョンを示します。 次の条件のいずれかが満たされると、モジュールが表示されます。
 
-- The current directory contains a `Gemfile` file
-- The current directory contains a `.rb` file
+- カレントディレクトリに`Gemfile`ファイルが含まれている
+- カレントディレクトリに`.rb`の拡張子のファイルが含まれている
 
 ### オプション
 
@@ -536,7 +536,7 @@ The `ruby` module shows the currently installed version of Ruby. 次の条件の
 | ---------- | ------------ | --------------------------- |
 | `symbol`   | `"💎 "`       | Rubyのバージョンを表示する前に使用される記号です。 |
 | `style`    | `"bold red"` | モジュールのスタイルです。               |
-| `disabled` | `false`      | Disables the `ruby` module. |
+| `disabled` | `false`      | `ruby`モジュールを無効にします。         |
 
 
 ### 設定例
@@ -550,10 +550,10 @@ symbol = "🔺 "
 
 ## Rust
 
-The `rust` module shows the currently installed version of Rust. 次の条件のいずれかが満たされると、モジュールが表示されます。
+`rust`モジュールには、現在インストールされているRustのバージョンが表示されます。 次の条件のいずれかが満たされると、モジュールが表示されます。
 
-- The current directory contains a `Cargo.toml` file
-- The current directory contains a file with the `.rs` extension
+- カレントディレクトリに`Cargo.toml`ファイルが含まれている
+- カレントディレクトリに`.rs`の拡張子のファイルが含まれている
 
 ### オプション
 
@@ -561,7 +561,7 @@ The `rust` module shows the currently installed version of Rust. 次の条件の
 | ---------- | ------------ | --------------------------- |
 | `symbol`   | `"🦀 "`       | Rustのバージョンを表示する前に使用される記号です。 |
 | `style`    | `"bold red"` | モジュールのスタイルです。               |
-| `disabled` | `false`      | Disables the `rust` module. |
+| `disabled` | `false`      | `rust`モジュールを無効にします。         |
 
 
 ### 設定例
@@ -575,7 +575,7 @@ symbol = "⚙️ "
 
 ## ユーザ名
 
-The `username` module shows active user's username. 次の条件のいずれかが満たされると、モジュールが表示されます。
+`username`モジュールには、アクティブなユーザーのユーザー名が表示されます。 次の条件のいずれかが満たされると、モジュールが表示されます。
 
 - カレントユーザーがroot
 - カレントユーザーが、ログインしているユーザーとは異なる
@@ -583,11 +583,11 @@ The `username` module shows active user's username. 次の条件のいずれか�
 
 ### オプション
 
-| 変数           | デフォルト           | 説明                              |
-| ------------ | --------------- | ------------------------------- |
-| `style_root` | `"bold red"`    | ユーザーがrootのときに使用されるスタイルです。       |
-| `style_user` | `"bold yellow"` | 非rootユーザーに使用されるスタイルです。          |
-| `disabled`   | `false`         | Disables the `username` module. |
+| 変数           | デフォルト           | 説明                        |
+| ------------ | --------------- | ------------------------- |
+| `style_root` | `"bold red"`    | ユーザーがrootのときに使用されるスタイルです。 |
+| `style_user` | `"bold yellow"` | 非rootユーザーに使用されるスタイルです。    |
+| `disabled`   | `false`         | `username`モジュールを無効にします。   |
 
 
 ### 設定例
