@@ -39,25 +39,25 @@ function set_win_title(){
 }
 ```
 
-You can use variables to customize this title (`$USER`, `$HOSTNAME`, and `$PWD` are popular choices).
+タイトルをカスタマイズするために変数を利用することができます (`$USER` 、 `$HOSTNAME`、 `$PWD` が一般的です)。
 
-In `bash`, set this function to be the precmd starship function:
+`bash` では関数を starship の precmd 関数としてセットしてください。
 
 ```bash
 starship_precmd_user_func="set_win_title"
 ```
 
-In `zsh`, add this to the `precmd_functions` array:
+`zsh`では関数を `precmd_functions` の配列に追加してください。
 
 ```bash
 precmd_functions+=(set_win_title)
 ```
 
-If you like the result, add these lines to your shell configuration file (`~/.bashrc` or `~/.zsrhc`) to make it permanent.
+もし結果に満足したら、永続化のためそれぞれの行を (`~/.bashrc` もしくは `~/.zsrhc`) に追加してください。
 
 ## スタイルの設定
 
-Style strings are a list of words, separated by whitespace. The words are not case sensitive (i.e. `bold` and `BoLd` are considered the same string). Each word can be one of the following:
+スタイル文字列は空白で区切られた単語のリストです。 大文字小文字を区別しません（例えば、 `bold` と`BoLd` は同じだとみなされます）。 それぞれ以下のいずれか一つが該当します。
 
 - `bold`
 - `underline`
@@ -67,7 +67,7 @@ Style strings are a list of words, separated by whitespace. The words are not ca
 - `<color>`
 - `none`
 
-where `<color>` is a color specifier (discussed below). `fg:<color>` and `<color>` currently do the same thing , though this may change in the future. The order of words in the string does not matter.
+ここで、 `<color>` は色を指定します（以下で述べます）。 `fg:<color>` と `<color>` は現在同様の動作ですが、将来変更される可能性があります。 文字列中の単語の順序は関係ありません。
 
 The `none` token overrides all other tokens in a string, so that e.g. `fg:red none fg:blue` will still create a string with no styling. It may become an error to use `none` in conjunction with other tokens in the future.
 
