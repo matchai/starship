@@ -63,19 +63,19 @@ p>
 
 ## 🍬 Features
 
-- Prompt character turns red if the last command exits with non-zero code
-- Current username if not the same as the logged-in user
-- Current Node.js version(`⬢`)
-- Current Rust version (`🦀`)
-- Current Ruby version (`💎`)
-- Current Python version (`🐍`)
-- Current Go version (`🐹`)
-- Nix-shell environment detection
+- 最後のコマンドがゼロ以外のコードで終了すると、プロンプト文字が赤に変わります
+- ログインユーザーと異なる場合にユーザー名を表示する
+- 現在の Node.js のバージョン (`⬢`)
+- 現在の Rust のバージョン (`🦀`)
+- 現在の Ruby のバージョン (`💎`)
+- 現在の Python のバージョン (`🐍`)
+- 現在の Go バージョン (`🐹`)
+- Nix-shell の環境検出
 - Current version of package in current directory (`📦`) 
   - npm (Node.js)
   - cargo (Rust)
   - poetry (Python)
-- Current battery level and status
+- 現在のバッテリー残量と状態
 - Current Git branch and rich repo status: 
   - `=` — conflicting changes
   - `⇡` — ahead of remote branch
@@ -88,13 +88,13 @@ p>
   - `»` — renamed files
   - `✘` — deleted files
 - Execution time of the last command if it exceeds the set threshold
-- Indicator for jobs in the background (`✦`)
+- バックグラウンドジョブのインジケーター (`✦`)
 
-## 🚀 Installation
+## 🚀 インストール
 
 ### Prerequisites
 
-- A [Powerline font](https://github.com/powerline/fonts) installed and enabled in your terminal (for example, try [Fira Code](https://github.com/tonsky/FiraCode)).
+- [Powerline フォント](https://github.com/powerline/fonts) がターミナルにインストールされて有効になっている必要があります（例えば [Fira Code](https://github.com/tonsky/FiraCode) を試してみてください）。
 
 ### Getting Started
 
@@ -168,26 +168,26 @@ Starship は AUR 上の `starship` というパッケージ名で利用可能で
 
 ## 🔧 設定
 
-For details on how to configure Starship, check out our [documentation](https://starship.rs/config/).
+Starship の設定方法の詳細に関しては、[ドキュメント](https://starship.rs/config/)をチェックしてください。
 
-## 🤝 Contributing
+## 🤝 貢献
 
-We are always looking for contributors of **all skill levels**! If you're looking to ease your way into the project, try out a [good first issue](https://github.com/starship/starship/labels/🌱%20good%20first%20issue).
+私たちは常に**すべてのスキルレベル**の貢献者を探しています！ もし簡単にプロジェクトへ参加する方法をお探しなら、 [good first issue](https://github.com/starship/starship/labels/🌱%20good%20first%20issue) に取り組んでみてください。
 
-### High Priority Needs
+### 特に必要としています
 
-- 👩‍💼 **Product Manager** 
-  - We have a GitHub Project and many unorganized/unprioritized features, as well as ideas that haven't yet been made into issues. Starship needs someone to own the product direction!
-- 👩‍🎨 **Designer** 
-  - Like making eye-catching websites? Excellent! We are looking to create a beautiful landing page showing off Starship in all its glory. Helping design for Starship's brand is a great opportunity to try out new ideas!
-- 👩‍💻 **Rust Developer** 
-  - There is *a lot* of low-hanging fruit when it comes to writing idiomatic Rust, designing effective Rust architecture, performance optimizations, cross-platform build optimizations, and more! I ([@matchai](https://github.com/matchai)) am a beginner to Rust. Come point us in the right direction!
+- 👩‍💼 **プロダクトマネージャー** 
+  - GitHub のプロジェクトには、整理/優先度付けがされていない機能や、Issue になっていないアイデアが多くあります。 プロダクトの方針を持っていただける方が Starship には必要です！
+- 👩‍🎨 **デザイナー** 
+  - 目を引く Web サイトを作りたいですか？ 素晴らしい！ 我々は Starship の栄光を際立てる美しい Web サイトを作成したいと考えています。 Starship ブランドのデザインを手助けすることは、新しいアイデアを試す絶好の機会です！
+- 👩‍💻 **Rust デベロッパー** 
+  - 慣用的な Rust の作成、効果的な Rust アーキテクチャの設計、パフォーマンスの最適化、クロスプラットフォームビルドの最適化などに関しては、*多く*の簡単な成果があります。 私（[@matchai](https://github.com/matchai)）は Rust の初心者です。 私たちを正しい方向に向けてください！
 
-If you are interested in helping contribute to starship, please take a look at our [Contributing Guide](https://github.com/starship/starship/blob/master/CONTRIBUTING.md). Also, feel free to drop into our [Discord server](https://discord.gg/8Jzqu3T) and say hi. 👋
+もしあなたが Starship への貢献に興味がある場合は、我々の[貢献ガイド](https://github.com/starship/starship/blob/master/CONTRIBUTING.md)をご覧ください。 また、気軽に我々の[Discord サーバー](https://discord.gg/8Jzqu3T)へ顔を出してください。 👋
 
 ### Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+これらの素晴らしい方々に感謝します ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
@@ -230,24 +230,24 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+このプロジェクトは [all-contributors](https://github.com/all-contributors/all-contributors) の仕様に従っています。 どんな種類の貢献でもお待ちしています！
 
 ## 💭 Inspired By
 
 Please check out these previous works that helped inspire the creation of starship. 🙏
 
-- **[denysdovhan/spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** - A ZSH prompt for astronauts.
+- **[denysdovhan/spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** - 宇宙飛行士のための ZSH プロンプト。
 
-- **[denysdovhan/robbyrussell-node](https://github.com/denysdovhan/robbyrussell-node)** - Cross-shell robbyrussell theme written in JavaScript.
+- **[denysdovhan/robbyrussell-node](https://github.com/denysdovhan/robbyrussell-node)** - 多くの shell に対応した JavaScript で書かれた robbyrussell テーマ。
 
-- **[reujab/silver](https://github.com/reujab/silver)** - A cross-shell customizable powerline-like prompt with icons.
+- **[reujab/silver](https://github.com/reujab/silver)** - 多くの shell に対応しているカスタマイズ可能でアイコンを表示できる powerline のようなプロンプト。
 
 <p align="center">
     <br>
     <img width="100" src="media/icon.png" alt="Starship rocket icon">
 </p>
 
-## 📝 License
+## 📝 ライセンス
 
 Copyright © 2019-present, [Starship Contributors](https://github.com/starship/starship/graphs/contributors).  
-This project is [ISC](https://github.com/starship/starship/blob/master/LICENSE) licensed.
+このプロジェクトは [ISC](https://github.com/starship/starship/blob/master/LICENSE) でライセンスされています。
