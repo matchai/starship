@@ -83,10 +83,10 @@ p>
   - `⇕` — 分岐した変更
   - `?` — 追跡されていない変更
   - `$` — stashされた変更
-  - `!` — modified files
-  - `+` — added files
-  - `»` — renamed files
-  - `✘` — deleted files
+  - `!` — 変更されたファイル
+  - `+` — 追加されたファイル
+  - `»` — 名前が変更されたファイル
+  - `✘` — 削除されたファイル
 - 閾値を超えた際の、コマンドの実行時間
 - バックグラウンドジョブのインジケーター (`✦`)
 
@@ -185,7 +185,7 @@ Starship の設定方法の詳細に関しては、[ドキュメント](https://
 
 もしあなたが Starship への貢献に興味がある場合は、我々の[貢献ガイド](https://github.com/starship/starship/blob/master/CONTRIBUTING.md)をご覧ください。 また、気軽に我々の[Discord サーバー](https://discord.gg/8Jzqu3T)へ顔を出してください。 👋
 
-### Contributors
+### 貢献者
 
 これらの素晴らしい方々に感謝します ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -232,9 +232,9 @@ Starship の設定方法の詳細に関しては、[ドキュメント](https://
 
 このプロジェクトは [all-contributors](https://github.com/all-contributors/all-contributors) の仕様に従っています。 どんな種類の貢献でもお待ちしています！
 
-## 💭 Inspired By
+## 影響を受けたプロダクト
 
-Please check out these previous works that helped inspire the creation of starship. 🙏
+よければStarship の作成に影響を与えた、これまでのプロジェクトをチェックしてください 🙏
 
 - **[denysdovhan/spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** - 宇宙飛行士のための ZSH プロンプト。
 
